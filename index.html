@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f2027;  /* fallback for old browsers */
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: #f4f4f4;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #00ffff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #00ccff;
+      margin-top: 30px;
+    }
+
+    a {
+      color: #00c8ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      text-align: center;
+      color: #aaa;
+    }
+
+    /* Particle background */
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      background: rgba(0, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+
+    /* Fade in text elements */
+    p, h2, ul, footer {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles"></div>
+
+  <h1>Privacy Policy</h1>
+
+  <p>Our mobile applications are built and provided by <strong>WebDevi</strong> as free applications. These services are intended for use as is.</p>
+
+  <p>This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information for all of our apps.</p>
+
+  <p>If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+
+  <h2>Information Collection and Use</h2>
+  <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request will be retained on your device and is not collected by us in any way.</p>
+
+  <p>The app may use third-party services that may collect information used to identify you.</p>
+
+  <p>Link to the privacy policy of third-party service providers used by the app:</p>
+  <ul>
+    <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+    <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob</a></li>
+    <li><a href="https://firebase.google.com/policies/analytics" target="_blank">Firebase Analytics</a></li>
+  </ul>
+
+  <h2>Log Data</h2>
+  <p>We want to inform you that whenever you use our Service, in case of an error in the app we collect data and information (through third-party products) on your phone called Log Data. This may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+
+  <h2>Cookies</h2>
+  <p>This Service does not use “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services.</p>
+
+  <h2>Security</h2>
+  <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+  <h2>Links to Other Sites</h2>
+  <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites.</p>
+
+  <h2>Children’s Privacy</h2>
+  <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age.</p>
+
+  <h2>Changes to This Privacy Policy</h2>
+  <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+  <h2>Contact Us</h2>
+  <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <strong>[your email here]</strong>.</p>
+
+  <p>This Privacy Policy applies to all mobile applications published by <strong>WebDevi</strong> on Google Play.</p>
+
+  <footer>
+    Last updated: April 29, 2025
+  </footer>
+
+  <script>
+    // Генерация плавающих частиц
+    const particleCount = 50;
+    for (let i = 0; i < particleCount; i++) {
+      const size = Math.random() * 5 + 2;
+      const particle = $('<div class="particle"></div>').css({
+        left: Math.random() * 100 + 'vw',
+        width: size + 'px',
+        height: size + 'px',
+        animationDuration: (Math.random() * 10 + 5) + 's',
+        animationDelay: (Math.random() * 5) + 's'
+      });
+      $('#particles').append(particle);
+    }
+
+    // Плавное появление текста
+    $(document).ready(function() {
+      $('p, h2, ul, footer').each(function(i) {
+        $(this).delay(100 * i).animate({ opacity: 1, top: 0 }, 600);
+      });
+    });
+  </script>
+</body>
+</html>
